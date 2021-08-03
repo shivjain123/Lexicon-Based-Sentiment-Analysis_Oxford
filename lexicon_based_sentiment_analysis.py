@@ -23,8 +23,4 @@ def map_scores(scores):
     return 'negative'
 
 df["Labels"] = df["scores"].apply(lambda x: map_scores(x))
-#df.head()
-
-d = {'positive': 1, 'negative': 0}
-df["Labels"] = df["Labels"].map(d)
 print(df.head())
